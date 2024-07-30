@@ -4,7 +4,6 @@ import it.gp.springsec3.model.Authority;
 import it.gp.springsec3.model.Customer;
 import it.gp.springsec3.repository.CustomerReository;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.authentication.AccountStatusUserDetailsChecker;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

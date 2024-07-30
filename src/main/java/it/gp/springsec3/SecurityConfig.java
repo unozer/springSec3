@@ -14,7 +14,8 @@ public class SecurityConfig {
     @SuppressWarnings("removal")
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
-                .requestMatchers("/account.html", "balance.html").hasAnyAuthority("VIEWACCOUNT", "VIEWBALANCE")
+                .requestMatchers("/**").hasRole("ADMIN")
+                .requestMatchers("/account.html", "/balance.html").hasAnyAuthority("VIEWACCOUNT", "VIEWBALANCE")
                 .requestMatchers("/loans.html").hasAuthority("VIEWLOANS")
                 .requestMatchers("/cards.html").hasAuthority("VIEWCARDS")
                 .requestMatchers("/user_page.html").authenticated()
